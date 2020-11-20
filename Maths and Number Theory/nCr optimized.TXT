@@ -1,0 +1,27 @@
+ll gcd(ll a, ll b)
+{
+	if (b == 0)
+		return a;
+	return gcd(b, a % b);
+}
+ll nCr(ll n, ll r)
+{
+	ll a = n;
+	ll b = r;
+	if (r > n - r)
+		r = n - r;
+	if (r == 1)
+		return n;
+	if (r == 0)
+		return 1;
+	for (ll i = 1; i <= r - 1; i++)
+	{
+		a *= n - i;
+		b *= i;
+		ll temp = gcd(a, b);
+		a /= temp;
+		b /= temp;
+	}
+	ll ans = a / b;
+	return a;
+}
