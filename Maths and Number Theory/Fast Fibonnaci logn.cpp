@@ -68,7 +68,6 @@ ll findfib(ll n)
 		return 1;
 	one = power(one, n - 2, 2);
 	return (one[1][1] + one[1][0]) % mod;
-
 }
 
 int main()
