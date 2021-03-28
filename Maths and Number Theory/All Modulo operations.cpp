@@ -37,7 +37,7 @@ ll multiplyExpo(ll a, ll b, ll n)
 	return res;
 }
 
-#define MOD 998244353
+#define MOD 1000000007
 
 ll add(ll x, ll y) {ll res = x + y; return (res >= MOD ? res - MOD : res);}
 ll mul(ll x, ll y) {ll res = x * y; return (res >= MOD ? res % MOD : res);}
